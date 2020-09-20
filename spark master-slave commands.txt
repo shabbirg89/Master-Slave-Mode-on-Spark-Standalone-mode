@@ -1,0 +1,9 @@
+cd %SPARK_HOME%
+bin\spark-class2.cmd org.apache.spark.deploy.master.Master
+
+http://localhost:8080/
+
+cd %SPARK_HOME%
+bin\spark-class2.cmd org.apache.spark.deploy.worker.Worker -c 1 -m 4G spark://YOUR_IP_ADDRESS:7077
+
+python C:/Users/sgove/OneDrive/Desktop/spark-basic.py
